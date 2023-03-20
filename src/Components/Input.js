@@ -1,58 +1,43 @@
 import React,{useState} from 'react'
+import {Button,FormControl,FormGroup,InputGroup} from 'react-bootstrap'
 
 
 //pretvorio u function i radi kad sve drugo bude class, ako mijenjam i App u App2 niš ne radi, kao i sa Messages
 export default function Input({onSendMessage}) {
    
-    const [txt,setTxt] = useState();
+    const [txt,setTxt] = useState('');
   
  const onChange = (e) => {
-    if(e.target.value !== undefined){
     setTxt(e.target.value);
-    }
-    else{
-        return;
-    }
  }
 
- const onSubmit = (e) => {
-    e.preventDefault();
-    onSendMessage(txt);
-    setTxt('');
-
-    
+    const onSubmit = (e) => {
+      e.preventDefault();
+      if(txt.length<1){
+        alert('You should write something before sending message!');
+      }
+      onSendMessage(txt);
+      setTxt("");
+  
     
  }
-//  const handleBtnInput = () =>{
-//    onSendMessage(txt);
-//    setTxt('');
 
-//  }
-  /*
-   <Form>
-      <Form.Group className="mb-3" controlId="formBasicEmail">
-        <Form.Label>Email address</Form.Label>
-        <Form.Control type="email" placeholder="Enter email" />
-        <Form.Text className="text-muted">
-          We'll never share your email with anyone else.
-        </Form.Text>
-      </Form.Group>
-  */ 
+
+
+
+  
   
     return (
-    <div>
-      <div className='Input'></div>
-        <form onSubmit={(e) => onSubmit(e)}>
-            <input 
-            onChange ={(e)=> onChange(e)}
-            value={txt}
-            type="text"
-            placeholder='Press ENTER and send your message...'
-            autoFocus = {true}
-            />
-           <button type={'submit'}>Send</button>  {/*onClick={handleBtnInput} */}
-        </form>
-    </div>
+    //pretvorio u bootstrap ipak formu, pomoću inputgrupe sam spojio ovaj aria-describedby sa id -jem buttona kojeg želim prikeljiti inputboxu
+<form onSubmit={(e)=>onSubmit(e)}>
+<FormGroup  role="form" onChange={(e)=>onChange(e)}>
+   <InputGroup > 
+      <FormControl aria-describedby="button-addon1" type="text" value={txt} size="lg" className="Input" placeholder="Please ENTER and send your message..."/>
+        <Button className="btn-large" variant="outline-secondary" id='button-addon1' type="submit" >Send</Button>
+    </InputGroup>
+  </FormGroup>
+  
+</form>
   )
 }
 

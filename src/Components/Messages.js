@@ -1,4 +1,5 @@
 import React from "react";
+import { ListGroup } from "react-bootstrap";
 
 
 export default function Messages (props) {
@@ -7,21 +8,22 @@ export default function Messages (props) {
     const renderMessage = (message) => {
       const {member, text} = message;
       const messageFromMe = member.id === currentMember.id;
+
       const className = messageFromMe ?
        "Messages-message currentMember" : "Messages-message";
         return (
-          <li className={className}>
-          <span
+          <ListGroup as="ul"  className={className}>
+          <ListGroup.Item as="li"
             className="avatar"
             style={{backgroundColor: member.clientData.color}}
           />
-            <div className="Message-content">
-              <div className="username">
+            <ListGroup.Item as="li" className="Message-content">
+              <ListGroup.Item as="li" className="username">
                 {member.clientData.username}
-              </div>
-              <div className="text">{text}</div>
-            </div>
-          </li>
+              </ListGroup.Item>
+              <ListGroup.Item as="li" className="text">{text}</ListGroup.Item>
+            </ListGroup.Item>
+          </ListGroup>
         );
       }
 
