@@ -72,21 +72,21 @@
   color: black;
 }
 
-form {
+/* form {
   display: flex;
   width: 100%;
   justify-content: space-between;
   max-width: 900px;
   margin: 0 auto 40px;
-}
+} */
 
-Input {
+/* Input {
   padding: 5px;
   font-size: 16px;
   border-radius: 15px;
   border: 1px solid black;
   flex-grow: 1;
-}
+} */
 
 button {
   padding: 5px 10px;

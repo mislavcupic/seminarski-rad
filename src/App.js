@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useEffect } from 'react';
-//import './App.css';
+import './App.css';
 import Messages from "./Components/Messages";
 import { Navbar,Container,Row} from 'react-bootstrap';
 import {uniqueNamesGenerator,adjectives,names} from 'unique-names-generator';
