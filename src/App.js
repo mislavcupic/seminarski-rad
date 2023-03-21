@@ -64,7 +64,7 @@ export default function App() {
 
   return (
     <>
-      <Navbar bg="dark" expand="xxl" className='justify-content-center text-white' >
+      <Navbar bg="dark" expand="xxl" className=' justify-content-center text-white' >
       CHAT APPLICATION
      </Navbar>
      <Container>

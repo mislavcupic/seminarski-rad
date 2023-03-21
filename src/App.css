@@ -27,6 +27,7 @@
 .Messages-message {
   display: flex;
   margin-top: 10px;
+  text-align: right;
 }
 
 .Messages-message.currentMember {
@@ -46,6 +47,7 @@
 .Messages-message > .avatar {
   height: 25px;
   width: 25px;
+  border-radius:50%;
   display: inline-block;
   margin: 0 10px -10px;
 }
