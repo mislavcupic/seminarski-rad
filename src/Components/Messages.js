@@ -31,7 +31,7 @@ export default function Messages (props) {
 
     return (
       <Col className="Messages-list">
-        {messages.map((message) => renderMessage(message))}
+        {messages.map((message,index)  =><Row key={index}>{renderMessage(message)}</Row> )}
         
       </Col>
     );

@@ -74,7 +74,7 @@ export default function App() {
         /> 
        
         
-        <Container ><Row className="fixed-bottom" class="row" >
+        <Container ><Row className="fixed-bottom"  >
           <hr></hr>  
          <Input  onSendMessage={onSendMessage} /> 
         </Row></Container>
