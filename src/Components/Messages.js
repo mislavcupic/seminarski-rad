@@ -12,7 +12,7 @@ export default function Messages (props) {
       const className = messageFromMe ?
        "Messages-message currentMember" : "Messages-message";
         return (
-          <Col  className={className}>
+          <Col  className={className} >
           <Row
             className="avatar"
             style={{backgroundColor: member.clientData.color}}
@@ -21,7 +21,7 @@ export default function Messages (props) {
               <Row className="username">
                 {member.clientData.username}
               </Row>
-              <div as="li" className="text">{text}</div>
+              <Row className="text">{text}</Row>
             </Row>
           </Col>
         );
@@ -30,10 +30,10 @@ export default function Messages (props) {
 
 
     return (
-      <ul className="Messages-list">
+      <Col className="Messages-list">
         {messages.map((message) => renderMessage(message))}
         
-      </ul>
+      </Col>
     );
     
    
