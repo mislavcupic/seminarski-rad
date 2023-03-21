@@ -12,7 +12,7 @@ export default function Messages (props) {
       const className = messageFromMe ?
        "Messages-message currentMember" : "Messages-message";
         return (
-          <Col  className={className} >
+          <Col  className={className}  >
           <Row
             className="avatar"
             style={{backgroundColor: member.clientData.color}}
