@@ -47,17 +47,19 @@
 
 .Message-content > .text {
   padding: 10px;
-  max-width: 400px;
+  max-width: 100vw;
   margin: 0;
   border-radius: 12px;
   background-color: magenta;
   color: black;
   display: inline-block;
+  word-wrap: break-word;
 }
 
 .currentMember > .Message-content .text {
   background-color: rosybrown;
   color: black;
+  max-width: max-content;
 }
 
 
