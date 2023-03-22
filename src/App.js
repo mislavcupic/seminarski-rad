@@ -33,6 +33,7 @@ export default function App() {
   });
 
   useEffect(() => {
+    
     // Povezivanje sa Scaledroneom
     const drone = new window.Scaledrone("fbEWYCxtwTPuUsqf", {
       data: member,
@@ -52,7 +53,8 @@ export default function App() {
     });
 
     setDrone(drone);
-  }, [member]);
+    
+  }, []);
 
   // Slanje poruka, event sa Input.js - a u kojem je poslan txt iz input-a
   const onSendMessage = (message) => {
