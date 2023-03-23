@@ -30,7 +30,7 @@ export default function Input({onSendMessage}) {
     return (
     //pretvorio u bootstrap ipak formu (ostavio root obične forme da mogu puknut onSubmit()), pomoću inputgrupe sam spojio ovaj aria-describedby sa id -jem buttona kojeg želim prikeljiti inputboxu
 <form onSubmit={(e)=>onSubmit(e)}>
-<FormGroup  role="form" value={txt} onChange={(e)=> setTxt(e.target.value.trim())}>
+<FormGroup  role="form" value={txt} onChange={(e)=> setTxt(e.target.value)}>
    <InputGroup > 
       <FormControl aria-describedby="button-addon1" type="text" value={txt} size="lg" className="Input" placeholder="Please ENTER and send your message..."/>
         <Button className="btn-large" variant="outline-secondary" id='button-addon1' type="submit" >Send</Button>
