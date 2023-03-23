@@ -56,7 +56,7 @@ export default function App() {
 
     setDrone(drone);
     
-  }, []);
+  }, [member]);
 
   // Slanje poruka, event sa Input.js - a u kojem je poslan txt iz input-a
   const onSendMessage = (message) => {
