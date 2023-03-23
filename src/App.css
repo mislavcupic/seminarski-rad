@@ -35,7 +35,7 @@
   width: 25px;
   border-radius:50%;
   display: inline-block;
-  margin: 0 10px -10px;
+  margin: 0 10px -10px 10px;
 }
 
 .Message-content > .username {
@@ -43,6 +43,7 @@
   color: gray;
   font-size: 14px;
   padding-bottom: 4px;
+  margin-left: 30px;
 }
 
 .Message-content > .text {

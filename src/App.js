@@ -33,7 +33,9 @@ export default function App() {
   });
 
   useEffect(() => {
-    
+    //provjera
+    console.log('mounting')
+    console.log('changing state');
     // Povezivanje sa Scaledroneom
     const drone = new window.Scaledrone("fbEWYCxtwTPuUsqf", {
       data: member,
